@@ -7,3 +7,7 @@
     box-sizing: border-box;
     padding: 3%;
 }
+
+.input__form_disabled {
+    opacity: .5;
+}

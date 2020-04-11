@@ -9,8 +9,10 @@
 @import url(./__temperature/weather__temperature.css);
 @import url(./__timestamp/weather__timestamp.css);
 @import url(./__title-holder/weather__title-holder.css);
+@import url(./__banner/weather__banner.css);
 
 .weather {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding: 5%;

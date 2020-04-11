@@ -9,11 +9,14 @@ export class Weather
         // Формируем корневой элемент
         this._root = document.createElement('section');
         this._root.classList.add('weather');
-        // this._root.classList.add('weather_hidden');
+        this._root.classList.add('weather_hidden');
 
         // Вставляем в корневой элемент вёрстку виджета
         this._root.insertAdjacentHTML('beforeend',
         `
+            <div class="weather__banner weather__banner_hidden">
+                <p class="weather__message">Идёт поиск</p>
+            </div>
             <div class="weather__title-holder">
                 <p class="weather__city">Город</p>
                 <time class="weather__timestamp">Отметка времени</time>
@@ -57,8 +60,38 @@ export class Weather
         this._humidity = this._root.querySelector('.weather__record_humidity').querySelector('.weather__record_data');
         this._wind = this._root.querySelector('.weather__record_wind').querySelector('.weather__record_data');
         this._recommends = this._root.querySelector('.weather__recommends');
+        this._banner = this._root.querySelector('.weather__banner');
+        this._message = this._root.querySelector('.weather__message');
 
         this._location.appendChild(this._root);
+    }
+
+    // Приватный метод для отображения баннера
+    _bannerShow()
+    {
+        this._banner.classList.remove('weather__banner_hidden');
+    }
+
+    // Метод для скрытия баннера
+    bannerHide()
+    {
+        this._banner.classList.add('weather__banner_hidden');
+    }
+
+    // Метод для отображения баннера ожидания
+    bannerAwait()
+    {
+        this._message.textContent = 'Идёт поиск...';
+        this._root.classList.remove('weather_hidden');
+        this._bannerShow();
+    }
+
+    // Метод для отображения баннера с ошибкой
+    bannerError(err)
+    {
+        this._message.textContent = err;
+        this._root.classList.remove('weather_hidden');
+        this._bannerShow();
     }
 
     // Метод для принудительного обновления информации в виджете
@@ -74,5 +107,6 @@ export class Weather
         this._humidity.textContent = data.humidity;
         this._wind.textContent = data.wind;
         this._recommends.textContent = data.recommends;
+        this._root.classList.remove('weather_hidden');
     }
 }
