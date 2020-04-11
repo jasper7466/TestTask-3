@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Тестовое задание">
+  <meta name="keywords" content="Яндекс.Облако, CTO, Yandex.Cloud CTO, test task">
+  <meta name="author" content="Tim">
+  <title>Слайсер</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css%>">
+  <!--<link rel="icon" href="<%=require('../images/favicon.png')%>" type="image/png"> -->
+</head>
+<body class="page">
+  <!-- - - - - - HEADER - - - - - -->
+  <header class="header">
+    <a class="header__text header__text_logo" href="#" target="_blank">Яндекс.Облако</a>
+    <h1 class="header__text header__text_caption">Тестовое задание для &nbsp;Школы Будущих СТО &nbsp;2020</h1>
+  </header>
+  <!-- - - - - - MAIN - - - - - -->
+  <main class="main">
+    <p>Dummy</p>
+  </main>
+  <!-- - - - - - FOOTER - - - - - -->
+  <footer class="footer">
+    <p class="footer__copyright">&copy; 2020 Tim</p>
+  </footer>
+  <script src="<%= htmlWebpackPlugin.files.chunks.index.entry%>"></script>
+</body>
+</html>
