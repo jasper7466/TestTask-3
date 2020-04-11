@@ -21,3 +21,7 @@
   border-radius: 25px;
   background-color: lightblue;
 }
+
+.weather_hidden {
+  display: none;
+}
