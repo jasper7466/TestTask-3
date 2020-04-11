@@ -9,7 +9,7 @@ export class Weather
         // Формируем корневой элемент
         this._root = document.createElement('section');
         this._root.classList.add('weather');
-        this._root.classList.add('weather_hidden');
+        // this._root.classList.add('weather_hidden');
 
         // Вставляем в корневой элемент вёрстку виджета
         this._root.insertAdjacentHTML('beforeend',
@@ -69,7 +69,7 @@ export class Weather
         this._condition.textContent = data.condition;
         this._icon.src = data.icon;
         this._temperature.textContent = data.temperature;
-        this._feel.textContent = data._feel;
+        this._feel.textContent = data.feel;
         this._pressure.textContent = data.pressure;
         this._humidity.textContent = data.humidity;
         this._wind.textContent = data.wind;
