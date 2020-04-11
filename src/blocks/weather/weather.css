@@ -1,0 +1,23 @@
+@import url(./__city/weather__city.css);
+@import url(./__common-data/weather__common-data.css);
+@import url(./__condition/weather__condition.css);
+@import url(./__data-holder/weather__data-holder.css);
+@import url(./__extra-data/weather__extra-data.css);
+@import url(./__icon/weather__icon.css);
+@import url(./__recommends/weather__recommends.css);
+@import url(./__record/weather__record.css);
+@import url(./__temperature/weather__temperature.css);
+@import url(./__timestamp/weather__timestamp.css);
+@import url(./__title-holder/weather__title-holder.css);
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  margin: 5%;
+  max-width: 700px;
+  width: fit-content;
+  box-sizing: content-box;
+  border-radius: 25px;
+  background-color: lightblue;
+}

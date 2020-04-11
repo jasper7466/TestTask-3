@@ -1,0 +1,17 @@
+.weather__record {
+    display: flex;
+    font-family: Roboto Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.weather__record_feel-like {
+    grid-area: feel;
+    font-family: Roboto Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+}

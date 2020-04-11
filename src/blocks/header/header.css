@@ -11,9 +11,9 @@
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
-  background-color: black;
+  background-color: rgb(56, 56, 236);
   color: white;
-  border-bottom: 10px solid gray;
+  border-bottom: 10px solid lightcoral;
 }
 
 @media screen and (max-width: 768px) {

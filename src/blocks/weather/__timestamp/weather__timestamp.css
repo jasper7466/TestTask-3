@@ -1,0 +1,8 @@
+.weather__timestamp {
+    margin: 0;
+    font-family: Roboto Regular, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 10px;
+}

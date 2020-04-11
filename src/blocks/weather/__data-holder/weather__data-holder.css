@@ -1,0 +1,5 @@
+.weather__data-holder {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
