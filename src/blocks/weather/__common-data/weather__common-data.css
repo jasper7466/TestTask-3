@@ -1,0 +1,8 @@
+.weather__common-data {
+    display: grid;
+    grid-template-areas: "icon temp" "feel feel";
+    grid-template-columns: auto 2fr;
+    grid-template-rows: auto 2fr;
+    width: fit-content;
+    margin: 10px;
+}

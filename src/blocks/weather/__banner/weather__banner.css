@@ -1,0 +1,23 @@
+.weather__banner {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background-color: gray;
+    opacity: .9;
+    font-family: Roboto Regular, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.weather__banner_hidden {
+    display: none;
+}

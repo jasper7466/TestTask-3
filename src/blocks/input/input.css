@@ -1,0 +1,10 @@
+@import url(./__form/input__form.css);
+@import url(./__field/input__field.css);
+
+.input {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    padding: 2%;
+}
