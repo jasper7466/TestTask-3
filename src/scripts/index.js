@@ -20,7 +20,7 @@ const token = document.querySelector('.input__field_token');    // Поле "К�
 const widget = new Weather(main);
 
 // Объявляем экземпляр класса для работы с API, в конструктор передаём токен
-const weather = new OpenWeather(undefined);
+const weather = new OpenWeather();
 
 // Функция-обработчик события отправки формы
 const submitHandler = function(event) {
@@ -28,7 +28,6 @@ const submitHandler = function(event) {
     input.lock();                           // Блокируем форму ввожа
     widget.bannerAwait();                   // На виджете показываем прелоудер
     weather.updateKey(token.value);         // Применяем введённый ключ
-    console.log(weather.key);
     weather.getWeather(city.value)          // Читаем город из формы и инициируем запрос
         .then((data) => {
             widget.directUpdate(data);      // Если ответ пришёл - обновляем виджет
