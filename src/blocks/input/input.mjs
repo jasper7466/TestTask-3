@@ -5,12 +5,11 @@ export class InputForm
     constructor(form, submitHandler)
     {
         this._form = form;                      // Форма
-        this._handler = submitHandler;          // Функция-обработчик данных от формы
         this._input = this._form.elements[0];   // Ссылка на поле ввода
         this._button = this._form.elements[1];  // Ссылка на кнопку отправки
 
         // Добавляем слушателя на событие подтверждения отправки формы
-        this._form.addEventListener('submit', (event) => this._handler(event));
+        this._form.addEventListener('submit', (event) => submitHandler(event));
     }
 
     // Метод для блокировки формы

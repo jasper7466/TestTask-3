@@ -15,16 +15,11 @@ const main = document.querySelector('.main');               // Блок main
 const form = document.querySelector('.input__form');        // Форма ввода
 const city = document.querySelector('.input__city');        // Поле "Город"
 
-// Объявляем экземпляр класса InputForm, в конструктор передаём ссылку на форму и обработчик отправки
-const input = new InputForm(form, submitHandler);
-
 // Объявляем экземпляр класса Weather, в конструктор передаём желаемое расположение виджета
 const widget = new Weather(main);
 
 // Объявляем экземпляр класса для работы с API, в конструктор передаём токен
 const weather = new OpenWeather(key);
-
-form.setAttribute('disabled', true);
 
 // Функция-обработчик события отправки формы
 const submitHandler = function(event) {
@@ -44,6 +39,6 @@ const submitHandler = function(event) {
         });
 }
 
-// Подвешиваем слушателя на событие подтверждения формы ввода
-form.addEventListener('submit', (event) => submitHandler(event));
+// Объявляем экземпляр класса InputForm, в конструктор передаём ссылку на форму и обработчик отправки
+const input = new InputForm(form, submitHandler);
     
