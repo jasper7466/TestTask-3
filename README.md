@@ -149,6 +149,7 @@
  - HTML
  - JS
  - CSS
+ - БЭМ
  - Git
  - Webpack
 
