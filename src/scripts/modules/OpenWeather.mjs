@@ -5,13 +5,13 @@ import { dateParser } from '../utilities/DateParser';
 export class OpenWeather
 {
     // Конструктор
-    constructor(key)
+    constructor(token = undefined)
     {
         this._moduleName = 'OpenWeather';                                // Название модуля (для формирования сообщений)
         this._URL = 'https://api.openweathermap.org/data/2.5/weather';   // Базовая часть адреса для запросов
         this._units = 'metric';     // Сиситема мер (metric/imperial)
         this._lang = 'ru';          // Язык
-        this._key = key;            // Ключ для доступа к сервису
+        this._key = token;           // Ключ для доступа к сервису
         this._data = {              // Объект с подготовленными для отображения в виджете данными (конкретно наш случай)
             city: undefined,
             timestamp: undefined,
@@ -25,6 +25,12 @@ export class OpenWeather
             recommends: undefined,
             main: undefined
         };
+    }
+
+    // Сеттер для ключа
+    updateKey(token)
+    {
+        this._key = token;
     }
 
     _makeRecommend()
@@ -78,7 +84,8 @@ export class OpenWeather
                     return res.json();
                 switch(res.status)
                 {
-                    case 404: return Promise.reject('Ничего не найдено =(');
+                    case 401: return Promise.reject('Ошибка авторизации.'); break;
+                    case 404: return Promise.reject('Ничего не найдено =('); break;
                 }
                 return Promise.reject(`${this._moduleName}. Error: ${res.status}`);
             })
