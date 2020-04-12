@@ -8,28 +8,28 @@
   <meta name="keywords" content="Яндекс.Облако, CTO, Yandex.Cloud CTO, test task">
   <meta name="author" content="Tim">
   <title>Прогноз погоды</title>
-  <link rel="stylesheet" href="./styles/style.50051c45422500e00d4a.css">
+  <link rel="stylesheet" href="./styles/style.20c2ecdc201e2e52e603.css">
 </head>
 <body class="page">
   <!-- - - - - - HEADER - - - - - -->
   <header class="header">
-    <a class="header__text header__text_logo" href="#" target="_blank">Яндекс.Облако + PHOENIX education</a>
-    <h1 class="header__text header__text_caption">Тестовое задание для &nbsp;Школы Будущих СТО &nbsp;2020</h1>
+    <a class="header__text header__text_logo" href="https://ycloud.school" target="_blank">Яндекс.Облако + PHOENIX&nbsp;education</a>
+    <h1 class="header__text header__text_caption">Тестовое задание для отбора в "Школу&nbsp;Будущих&nbsp;СТО&nbsp;2020"</h1>
   </header>
   <!-- - - - - - MAIN - - - - - -->
   <main class="main">
     <!-- - - - - - MAIN / INPUT - - - - - -->
     <section class="input">
       <form class="input__form">
-        <input class="input__country" type="text" placeholder="Страна">
-        <input class="input__region" type="text" placeholder="Регион">
-        <input class="input__city" type="text" placeholder="Город">
+        <input class="input__field input__field_token" type="text" placeholder="OpenWeather API Key" required>
+        <input class="input__field input__field_city" type="text" placeholder="Город, страна, регион или индекс" minlength="2" maxlength="30" required>
         <input class="input__submit" type="submit" value="Искать">
       </form>
     </section>
   </main>
   <!-- - - - - - FOOTER - - - - - -->
   <footer class="footer">
+    <a class="footer__copyright footer__copyright_link" href="https://openweathermap.org" target="_blank">Powered by &copy; OpenWeather</a>
     <p class="footer__copyright">&copy; 2020 Tim</p>
   </footer>
   <script src="./scripts/index.83c8bca1a5ad16e5cf99.js"></script>
